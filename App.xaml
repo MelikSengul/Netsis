@@ -1,0 +1,9 @@
+﻿<Application x:Class="NetAi.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:NetAi"
+             StartupUri="PencereAna.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

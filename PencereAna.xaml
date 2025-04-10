@@ -1,0 +1,118 @@
+﻿<Window x:Name="AnaPencere" x:Class="NetAi.PencereAna"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NetAi"
+        mc:Ignorable="d" 
+        Title="NetAi - Entegre / Coded by Melik" 
+        Height="425" Width="650"
+        ScrollViewer.VerticalScrollBarVisibility="Disabled" 
+        FontSize="10" FontFamily="Arial" WindowStyle="ThreeDBorderWindow" WindowStartupLocation="CenterScreen">
+
+    <Grid x:Name="AnaProgramPenceresi" Background="#FFEEECEC">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Başlık -->
+            <RowDefinition Height="*"/>
+            <!-- Ana içerik -->
+            <RowDefinition Height="Auto"/>
+            <!-- ProgressBar -->
+            <RowDefinition Height="Auto"/>
+            <!-- Log paneli -->
+        </Grid.RowDefinitions>
+
+        <!-- Başlık -->
+        <Label x:Name="AnaPencereBaslik" Grid.Row="0" Content="Entegre Bilgi İşlemleri" Height="50" 
+               FontFamily="Arial" FontSize="25" FontWeight="Bold" 
+               HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
+               Foreground="Black" Background="#FFA0A0A0" Margin="25,0,25,0"/>
+
+        <!-- Ana İçerik -->
+        <Grid Grid.Row="1">
+            <!-- Butonlar -->
+            <Button x:Name="button_efatura" Content="E-Fatura" HorizontalAlignment="Left" Margin="25,10,0,0" 
+                    VerticalAlignment="Top" Width="100" Height="40" Click="Button_click_efatura" 
+                    FontFamily="Arial" FontSize="18" FontWeight="Bold" 
+                    VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Padding="5,1,1,1" 
+                    BorderThickness="10,0,0,0" BorderBrush="#FFA0A0A0"/>
+            <Button x:Name="button_earsiv" Content="E-Arşiv" HorizontalAlignment="Left" Margin="25,60,0,0" 
+                        VerticalAlignment="Top" Width="100" Height="40" Click="Button_click_earsiv" 
+                        FontFamily="Arial" FontSize="18" FontWeight="Bold" 
+                        HorizontalContentAlignment="Left" Padding="5,1,1,1" BorderThickness="10,0,0,0" 
+                        BorderBrush="#FFA0A0A0"/>
+            <Button x:Name="button_caridagitimsira" Content="Cari Dağıtım Sıra" HorizontalAlignment="Left" 
+                        Margin="25,110,0,0" VerticalAlignment="Top" Width="225" Height="40" 
+                        Click="Button_click_caridagitimsira" FontFamily="Arial" FontSize="18" 
+                        FontWeight="Bold" HorizontalContentAlignment="Left" Padding="5,1,1,1" 
+                        BorderThickness="10,0,0,0" BorderBrush="#FFA0A0A0"/>
+            <Button x:Name="button_carimuhasebekodu" Content="Cari Muhasebe Kodu" HorizontalAlignment="Left" 
+                        Margin="25,160,0,0" VerticalAlignment="Top" Width="225" Height="40" 
+                        Click="Button_click_carimuhasebekodu" FontFamily="Arial" FontSize="18" 
+                        FontWeight="Bold" HorizontalContentAlignment="Left" Padding="5,1,1,1" 
+                        BorderThickness="10,0,0,0" BorderBrush="#FFA0A0A0"/>
+            <Button x:Name="button_perakendeverileriniguncelle" Content="Verileri Güncelle - Perakende" 
+                        HorizontalAlignment="Right" Margin="0,10,25,0" VerticalAlignment="Top" Width="334" 
+                        Height="40" Click="Button_click_perakendeverileriniguncelle" FontFamily="Arial" 
+                        FontSize="18" FontWeight="Bold" VerticalContentAlignment="Center" 
+                        HorizontalContentAlignment="Left" Padding="5,1,1,1" BorderThickness="10,0,0,0" 
+                        BorderBrush="#FFA0A0A0"/>
+            <Button x:Name="button_netsisverileriniguncelle" Content="Verileri Güncelle - Netsis" 
+                        HorizontalAlignment="Right" Margin="0,60,25,0" VerticalAlignment="Top" Width="334" 
+                        Height="40" Click="Button_click_netsisverileriniguncelle" FontFamily="Arial" 
+                        FontSize="18" FontWeight="Bold" VerticalContentAlignment="Center" 
+                        HorizontalContentAlignment="Left" Padding="5,1,1,1" BorderThickness="10,0,0,0" 
+                        BorderBrush="#FFA0A0A0"/>
+            <Button x:Name="button_casteraziexport" Content="Terazi Dosyası Oluştur - Cas" 
+                        HorizontalAlignment="Right" Margin="0,110,25,0" VerticalAlignment="Top" Width="334" 
+                        Height="40" Click="Button_click_casterazidosyaolustur" FontFamily="Arial" 
+                        FontSize="18" FontWeight="Bold" VerticalContentAlignment="Center" 
+                        HorizontalContentAlignment="Left" Padding="5,1,1,1" BorderThickness="10,0,0,0" 
+                        BorderBrush="#FFA0A0A0"/>
+            <Button x:Name="button_aclasteraziexport" Content="Terazi Dosyası Oluştur - Aclas" 
+                        Margin="0,160,25,0" Click="Button_click_aclasterazidosyaolustur" 
+                        FontFamily="Arial" FontSize="18" FontWeight="Bold" 
+                        VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Padding="5,1,1,1" 
+                        BorderThickness="10,0,0,0" Height="40" VerticalAlignment="Top" HorizontalAlignment="Right" 
+                        Width="334" BorderBrush="#FFA0A0A0"/>
+            <Button x:Name="button_sync" Content="SENKRONİZASYONU BAŞLAT" 
+                Margin="0,210,25,0" Click="Button_click_sync" 
+                FontFamily="Arial" FontSize="18" FontWeight="Bold" 
+                VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Padding="5,1,1,1" 
+                BorderThickness="10,0,0,0" Height="40" VerticalAlignment="Top" HorizontalAlignment="Right" 
+                Width="334" BorderBrush="#FFA0A0A0" Background="#FFFAD8D8"/>
+
+        </Grid>
+
+        <!-- ProgressBar -->
+        <Grid Grid.Row="2">            
+            <ProgressBar x:Name="PB1" Margin="25,0,100,10" Minimum="0" Maximum="100" 
+                         Foreground="#FFA0A0A0" FontSize="14" FontWeight="Bold" Height="50" 
+                         FontFamily="Arial" HorizontalContentAlignment="Center" 
+                         VerticalContentAlignment="Center" BorderThickness="0,0,0,0" Padding="5,5,5,5" 
+                         BorderBrush="{x:Null}" Background="#FFDDDDDD">
+                <ProgressBar.Template>
+                    <ControlTemplate TargetType="ProgressBar">
+                        <Grid x:Name="TemplateRoot">
+                            <Border x:Name="PART_Track" Background="{TemplateBinding Background}" 
+                                    BorderBrush="{TemplateBinding BorderBrush}" 
+                                    BorderThickness="{TemplateBinding BorderThickness}" 
+                                    HorizontalAlignment="Stretch"/>
+                            <Rectangle x:Name="PART_Indicator" HorizontalAlignment="Left" 
+                                      Fill="{TemplateBinding Foreground}" />
+                            <TextBlock x:Name="ProgressText" HorizontalAlignment="Center" 
+                                      VerticalAlignment="Center" Foreground="Black" 
+                                      Text="{Binding RelativeSource={RelativeSource TemplatedParent}, 
+                                      Path=Value, StringFormat={}{0}%}" />
+                        </Grid>
+                    </ControlTemplate>
+                </ProgressBar.Template>
+            </ProgressBar>
+            <Button x:Name="button_log" HorizontalAlignment="Right" Margin="0,0,25,10" 
+        Content="Log" Click="Button_click_log" FontFamily="Arial" 
+        FontSize="18" VerticalContentAlignment="Center" 
+        HorizontalContentAlignment="Center" Padding="5,1,1,1" BorderThickness="10,0,0,0" 
+        Height="50" Width="65" BorderBrush="#FFA0A0A0" FontWeight="Bold"/>
+        </Grid>
+    </Grid>
+</Window>
